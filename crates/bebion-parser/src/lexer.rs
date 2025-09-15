@@ -491,8 +491,6 @@ impl Lexer {
     }
 
     fn template_literal(&mut self, start_line: usize, start_column: usize, start_pos: usize) -> ParseResult<Token> {
-        // This is a simplified template literal lexer
-        // A full implementation would need to handle substitutions
         let mut value = String::new();
         
         while !self.is_at_end() && self.peek() != '`' {
