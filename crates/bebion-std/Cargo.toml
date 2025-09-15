@@ -1,0 +1,18 @@
+[package]
+name = "bebion-std"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bebion-runtime = { path = "../bebion-runtime" }
+bebion-gc = { path = "../bebion-gc" }
+tokio = { version = "1.0", features = ["full"] }
+tokio-util = { version = "0.7", features = ["codec"] }
+bytes = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+reqwest = { version = "0.11", features = ["json", "stream"] }
+sha2 = "0.10"
+rand = "0.8"
+base64 = "0.21"
+tracing = "0.1"
