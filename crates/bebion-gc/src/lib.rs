@@ -30,7 +30,7 @@ pub enum GcObjectType {
     Array(Vec<GcHandle>),
     Function {
         name: Option<String>,
-        bytecode: Vec<u8>, // Simplified bytecode representation
+        bytecode: Vec<u8>,
         closure: HashMap<String, GcHandle>,
     },
     Promise {
