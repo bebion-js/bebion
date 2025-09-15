@@ -255,7 +255,6 @@ impl Program {
                 AstNode::CallExpression { callee, arguments, .. } => {
                     1 + count_nodes(callee) + arguments.iter().map(count_nodes).sum::<usize>()
                 }
-                // Add more cases as needed
                 _ => 1,
             }
         }
