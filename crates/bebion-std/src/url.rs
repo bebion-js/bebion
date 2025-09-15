@@ -20,7 +20,6 @@ impl UrlModule {
     }
     
     pub fn parse(&self, url_str: &str) -> Result<ParsedUrl, Box<dyn std::error::Error>> {
-        // Simple URL parsing implementation
         let url = url_str;
         
         // Extract protocol
@@ -120,7 +119,6 @@ impl UrlModule {
     pub fn resolve(&self, base: &str, relative: &str) -> Result<String, Box<dyn std::error::Error>> {
         let base_url = self.parse(base)?;
         
-        // Simple resolution - in a full implementation this would be more complex
         if relative.starts_with("http://") || relative.starts_with("https://") {
             Ok(relative.to_string())
         } else if relative.starts_with('/') {
@@ -213,7 +211,6 @@ impl Module for UrlModule {
     }
 }
 
-// Simple URL encoding implementation
 mod urlencoding {
     use std::borrow::Cow;
     
