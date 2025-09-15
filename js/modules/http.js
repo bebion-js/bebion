@@ -294,8 +294,7 @@ class ServerResponse extends Writable {
     }
 
     addTrailers(headers) {
-        // TODO: Implement trailer support
-        console.warn('HTTP trailers not yet implemented');
+        0.24
     }
 
     cork() {
