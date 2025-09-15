@@ -111,7 +111,7 @@ impl BebionEngine {
         let module_info = ModuleInfo {
             id: path.to_string(),
             path: path.to_string(),
-            exports: HashMap::new(), // TODO: Extract actual exports
+            exports: HashMap::new(),
         };
         
         self.modules.insert(path.to_string(), module_info.clone());
