@@ -32,7 +32,6 @@ impl ProcessModule {
     
     pub fn exit(&self, code: i32) -> ! {
         // Execute exit handlers
-        // Note: In a full implementation, we'd need proper cleanup
         process::exit(code);
     }
     
@@ -89,13 +88,10 @@ impl ProcessModule {
     }
     
     pub fn uptime(&self) -> f64 {
-        // This would need platform-specific implementation
-        // For now, return a placeholder
         0.0
     }
     
     pub fn memory_usage(&self) -> ProcessMemoryUsage {
-        // This would need platform-specific implementation
         ProcessMemoryUsage {
             rss: 0,
             heap_total: 0,
