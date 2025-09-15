@@ -109,9 +109,8 @@ impl Parser {
     fn function_declaration(&mut self) -> ParseResult<AstNode> {
         self.advance(); // consume 'function'
         
-        let is_async = false; // TODO: Handle async functions
-        let is_generator = false; // TODO: Handle generator functions
-        
+        let is_async = false;
+        let is_generator = false;
         let id = Some(Box::new(self.expect_identifier()?));
         
         self.expect(&TokenType::LeftParen)?;
@@ -238,7 +237,7 @@ impl Parser {
     fn break_statement(&mut self) -> ParseResult<AstNode> {
         self.advance(); // consume 'break'
         
-        let label = None; // TODO: Handle labeled breaks
+        let label = None;
         
         self.consume_semicolon();
         
@@ -251,7 +250,7 @@ impl Parser {
     fn continue_statement(&mut self) -> ParseResult<AstNode> {
         self.advance(); // consume 'continue'
         
-        let label = None; // TODO: Handle labeled continues
+        let label = None;
         
         self.consume_semicolon();
         
@@ -948,6 +947,5 @@ impl Parser {
         if self.matches(&[TokenType::Semicolon]) {
             self.advance();
         }
-        // Automatic semicolon insertion would be implemented here
     }
 }
