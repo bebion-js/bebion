@@ -28,7 +28,7 @@ pub struct WasiFunctionInfo {
 /// WASI state for the store
 #[derive(Default)]
 struct WasiState {
-    // Add any state needed for WASI operations
+    
 }
 
 impl WasiModule {
@@ -218,11 +218,8 @@ impl WasiModule {
         if let Some(memory) = self.get_memory() {
             let bytes = s.as_bytes();
             let data = memory.data_mut(&mut self.store);
-            
-            // Simple allocation - in a real implementation, you'd need a proper allocator
             let ptr = data.len() as u32;
             
-            // This is a simplified example - real WASI modules would have proper memory management
             Err(FfiError::RuntimeError("Memory allocation not implemented".to_string()))
         } else {
             Err(FfiError::RuntimeError("No memory export found".to_string()))
