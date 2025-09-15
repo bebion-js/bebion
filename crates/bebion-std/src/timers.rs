@@ -171,7 +171,7 @@ impl Module for TimersModule {
     
     fn initialize(&mut self, runtime: &mut Runtime) -> Result<(), Box<dyn std::error::Error>> {
         // Set global timer functions
-        runtime.set_global("setTimeout", Value::Undefined); // Would need proper function objects
+        runtime.set_global("setTimeout", Value::Undefined);
         runtime.set_global("clearTimeout", Value::Undefined);
         runtime.set_global("setInterval", Value::Undefined);
         runtime.set_global("clearInterval", Value::Undefined);
