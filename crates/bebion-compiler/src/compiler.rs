@@ -162,7 +162,7 @@ impl Compiler {
                     LiteralValue::Null => Constant::Null,
                     LiteralValue::Undefined => Constant::Undefined,
                     LiteralValue::RegExp { pattern, flags } => {
-                        // For now, treat regex as string
+                        // treat regex as string
                         Constant::String(format!("/{}/{}", pattern, flags))
                     }
                 };
