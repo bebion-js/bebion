@@ -27,9 +27,6 @@ pub fn run_file(
 
     debug!("Read {} bytes from {}", source.len(), file_path.display());
 
-    // Set up process arguments (similar to Node.js)
-    // TODO: Set process.argv in the runtime
-
     // Execute the script
     let start_time = Instant::now();
     
