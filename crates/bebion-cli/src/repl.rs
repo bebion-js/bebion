@@ -102,7 +102,6 @@ fn execute_code(engine: &mut BebionEngine, code: &str, line_number: usize) {
 
     match engine.execute_script(code) {
         Ok(result) => {
-            // TODO: Convert GcHandle to displayable value
             println!("{}", format!("=> [object]").bright_cyan());
         }
         Err(err) => {
