@@ -333,8 +333,6 @@ class BebionRuntime {
      * Call native function through FFI
      */
     nativeCall(functionName, args) {
-        // This would be implemented by the native runtime
-        // For now, return a placeholder
         return `[Native call: ${functionName}(${args.join(', ')})]`;
     }
 
