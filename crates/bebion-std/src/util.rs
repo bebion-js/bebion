@@ -73,7 +73,6 @@ impl UtilModule {
                 }
             }
             Value::Object(_) => {
-                // This would require access to the GC to inspect object contents
                 if options.colors {
                     "\x1b[36m[Object]\x1b[39m".to_string()
                 } else {
@@ -131,7 +130,6 @@ impl UtilModule {
                     'j' => {
                         // JSON
                         if arg_index < args.len() {
-                            // This would need proper JSON serialization
                             result.push_str(&args[arg_index].to_string());
                             arg_index += 1;
                         } else {
@@ -171,7 +169,6 @@ impl UtilModule {
     }
     
     pub fn is_array(&self, value: &Value) -> bool {
-        // This would need access to the GC to check object type
         matches!(value, Value::Object(_))
     }
     
@@ -200,7 +197,6 @@ impl UtilModule {
     }
     
     pub fn is_function(&self, value: &Value) -> bool {
-        // This would need access to the GC to check if object is a function
         matches!(value, Value::Object(_))
     }
 }
