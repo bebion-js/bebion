@@ -92,8 +92,7 @@ impl Module for ConsoleModule {
     fn initialize(&mut self, runtime: &mut Runtime) -> Result<(), Box<dyn std::error::Error>> {
         // Set global console object
         runtime.set_global("console", Value::Object(
-            // This would need proper object creation with methods
-            bebion_gc::GcHandle::new(0) // Placeholder
+            bebion_gc::GcHandle::new(0)
         ));
         
         Ok(())
