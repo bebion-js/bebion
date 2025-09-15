@@ -183,26 +183,15 @@ impl Cli {
                 if let Some(ver) = version {
                     println!("Version: {}", ver);
                 }
-                // TODO: Implement package installation
-                println!("Package management not yet implemented");
             }
             
             PackageAction::Remove { name } => {
-                println!("Removing package: {}", name);
-                // TODO: Implement package removal
-                println!("Package management not yet implemented");
             }
             
             PackageAction::List => {
-                println!("Installed packages:");
-                // TODO: List installed packages
-                println!("Package management not yet implemented");
             }
             
             PackageAction::Update => {
-                println!("Updating packages...");
-                // TODO: Update packages
-                println!("Package management not yet implemented");
             }
         }
         
