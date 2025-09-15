@@ -367,7 +367,7 @@ impl VirtualMachine {
                     let mut gc = self.gc.lock().unwrap();
                     gc.allocate_function(
                         name.clone(),
-                        vec![], // Simplified for now
+                        vec![],
                         HashMap::new(),
                     )
                 };
@@ -392,8 +392,6 @@ impl VirtualMachine {
                 // Check if it's a function object
                 let gc = self.gc.lock().unwrap();
                 if let Some(GcObjectType::Function { bytecode, .. }) = gc.get_object_type(handle) {
-                    // Create new call frame for function execution
-                    // This is simplified - a full implementation would handle closures, 'this', etc.
                     return Err(RuntimeError::InvalidOperation("Function calls not fully implemented".to_string()));
                 } else {
                     return Err(RuntimeError::TypeError("Not a function".to_string()));
